@@ -1,0 +1,397 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #1D1D1D;
+    color: whitesmoke;
+    font: 200 14px 'Poppins', sans-serif;
+}
+
+h2{
+    font-size: 36px;
+    line-height: 36px;
+}
+
+h3{
+    color: #999;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+nav{
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background-color: #1D1D1D;
+    padding: 30px 100px 10px 100px;
+}
+
+nav ul{
+    display: inline-block;
+}
+
+nav ul li{
+    padding-top: 12px;
+}
+
+nav ul li a{
+    margin-right: 10px;
+}
+
+section{
+    padding: 10px 100px 10px 100px;
+}
+
+p{
+    text-align: justify;
+}
+
+i{
+    font-size: 28px;
+}
+
+i:hover{
+    color: #1dbe17;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:any-link{
+    color: whitesmoke;
+}
+
+a:-webkit-any-link{
+    color: whitesmoke;
+}
+
+a:-moz-any-link{
+    color: whitesmoke;
+}
+
+a:hover{
+    color: #1dbe17;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    float: left;
+    margin-right: 5px;
+}
+
+button{
+    border-radius: 10px;
+}
+
+footer{
+    bottom: 100%;
+    height: 55px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+footer ul{
+    display: inline-block;
+}
+
+footer ul li{
+    float:left;
+}
+
+/*Fondo animado*/
+
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    bottom: 60vh;
+    left: 0;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #1dbe17;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #133d12, 0 0 50px #1dbe17, 0 0 100px #1dbe17;
+    opacity: .95;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(160s / var(--i));
+}
+
+.bubbles span:nth-child(even){
+    background: rgb(178, 175, 175);
+    box-shadow: 0 0 0 10px #999, 0 0 50px whitesmoke, 0 0 100px whitesmoke;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.background {
+    position: fixed; /* Coloca este elemento de forma absoluta dentro del contenedor */
+    top: 70%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%; /* Ajusta la imagen para cubrir todo el contenedor */
+    z-index: -2; /* Coloca este elemento detrás de los demás */
+}
+
+/*CSS IDs y Clases*/
+
+#Start{
+    min-height: 280px;
+    padding-top: 200px;
+    margin-bottom: 300px;
+}
+
+#Start h2{
+    font-size: 66px;
+    margin-bottom: 5px;
+}
+
+#Start h3{
+    font-size: 40px;
+}
+
+#Info{
+    margin-bottom: 300px;
+}
+
+#Plan h3{
+    margin-bottom: 100px;
+}
+
+#Plan{
+    text-align: center;
+}
+
+.masinfo button{
+    background-color: #1D1D1D;
+    color: whitesmoke;
+    font-weight: 600;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#BEST button:hover{
+    color: #1dbe17;
+}
+
+/*Grid about me*/
+
+.mediainfo{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.infotext{
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+}
+
+.infotext p{
+    font-size: 20px;
+    margin-right: 50px;
+}
+
+.infotext img{
+    margin-bottom: 40px;
+}
+
+#Info h2{
+    margin-bottom: 10px;
+}
+
+/*Experience Card*/
+
+.gridexp{
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-gap: 10px;
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+@media(min-width: 400px){
+    .gridexp{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px 30px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+}
+
+#Quarterly{
+    border-radius: 5px;
+    border: 3px solid #1dbe17;
+}
+
+.cardexp{
+    border-radius: 15px;
+    color: white;
+    padding: 10px 15px;
+    background-color: #999;
+    margin-bottom: 300px;
+}
+.cardexp h2{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.cardexp h3{
+    color: whitesmoke;
+    margin-bottom: 5px;
+}
+
+.cardexp strong{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.cardexp p{
+    margin-bottom: 20px;
+}
+.cardexp ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.cardexp li{
+    height: 30px;
+}
+
+.text-background {
+    height: 100vh; /* Ajusta la altura del contenedor al 100% de la altura de la ventana */
+    overflow: hidden; /* Esto oculta cualquier desbordamiento de contenido fuera del contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Color del texto */
+    font-size: 36px; /* Tamaño de fuente del texto */
+    font-family: 'Poppins', sans-serif; /* Familia de fuentes del texto */
+  }
+  
+.content {
+    text-align: center;
+}
+
+/*Formulario*/
+
+#Contact h2{
+    margin-bottom: 50px;
+}
+
+.itemform{
+    display: grid;
+    grid-template-columns: 150px 350px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.itemform label{
+    font-weight: 700;
+}
+.itemform input,.itemform textarea{
+    border-radius: 5px;
+    border: 1px solid white;
+}
+input[type="submit"]{
+    color: #141310;
+    background-color: whitesmoke;
+    padding: 10px;
+    grid-column: 2/3;
+    justify-self: end;
+}
+
+.imgcontainer img {
+    /* Estilos para la imagen, como se desee */
+    margin-left: 150px;
+    margin-top: 40px;
+}
+
+/* Idiomas */
+
+.en{
+    color: whitesmoke;
+    margin-right: 10px;
+}
+
+.es{
+    color: #1dbe17;
+    margin-left: 10px;
+}
+
+.check{
+    position: relative;
+    width: 50px;
+}
+
+.check:before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 25px;
+}
+
+.check::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.30s;
+    border: 2px solid #1dbe17;
+    box-sizing: border-box;
+}
+
+.check:checked:after{
+    left: 25px;
+    border: 2px solid #1dbe17;
+}
+
+.check:checked:before{
+    background: #1dbe17;
+}
+
+#idiomchange{
+    text-align: bottom;
+    display: flex;
+    float: right;
+    margin-top: 10px;
+}
